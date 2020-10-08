@@ -1,6 +1,6 @@
-# myorg/jupyter_theme_youcan
+# @marcucius/jupyter_theme_youcan
 
-A JupyterLab theme extension.]: Theme for youCANdoThermodynamics
+A JupyterLab theme extension for youCANdoThermodynamics
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ A JupyterLab theme extension.]: Theme for youCANdoThermodynamics
 ## Installation
 
 ```bash
-jupyter labextension install myorg/jupyter_theme_youcan
+jupyter labextension install @marcucius/jupyter_theme_youcan
 ```
 
 ## Development
