@@ -1,6 +1,6 @@
 
-@import "Lato2OFLWeb/Lato/latofonts.css";
-@import "https://cdn.jsdelivr.net/npm/victormono@latest/dist/index.min.css";
+@import 'Lato2OFLWeb/Lato/latofonts.css';
+@import 'https://cdn.jsdelivr.net/npm/victormono@latest/dist/index.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=League+Script&family=Lora&display=swap');
 @font-face{
   font-family: 'JetBrains Mono';
@@ -58,7 +58,7 @@
 
 /*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
 div#notebook-container.container {
-		font-family: "LatoWeb";
+		font-family: 'LatoWeb';
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -66,12 +66,12 @@ div#notebook-container.container {
 }
 
 /*div#notebook-container.container::before {
-	content: "ttttt";
+	content: 'ttttt';
 }*/
 
 body {
 	counter-reset: toc_section;
-	font-family: "LatoWeb";
+	font-family: 'LatoWeb';
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -79,7 +79,7 @@ body {
 }
 
 body {
-    font-feature-settings: "onum" 1;
+    font-feature-settings: 'onum' 1;
 }
 @supports (font-variant-numeric: oldstyle-nums) {
     body {
@@ -97,7 +97,7 @@ body {
 
 
 span.cm-comment {
-	font-family: "Victor Mono", monospace;
+	font-family: 'Victor Mono', monospace;
 	/*font-style: italic;*/
 	font-variant-ligatures: nonoe;
 }
@@ -182,7 +182,7 @@ header.index {
 
 /*═════ citations ═══════════════════════════════════════════════════════════80════5═══*/
 .cite_textbook {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-variant-numeric: oldstyle-nums;
   /*font-style: italic;*/
   font-size: 90%;
@@ -194,29 +194,28 @@ header.index {
 
 
 div.cite_textbook.cb9 span::before {
-  content: "\00a0 ⋮ Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019)";
-	McGraw-Hill Education.";
+  content: '\00a0 ⋮ Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019)';
 }
 div.cite_textbook.cb9 span::after {
-	content: "Thermodynamics: An engineering approach, 9e. ";
+	content: 'Thermodynamics: An engineering approach, 9e. ';
 	font-style: italic;
 }
 div.cite_textbook.cb9::after {
-	content: "\00a0 McGraw-Hill Education.";
+	content: '\00a0 McGraw-Hill Education.';
 	/*font-style: normal;*/
 }
 
 
 
 div.cite_textbook.cb8 span::before {
-  content: "\00a0⋮ Çengel, Y. A., Boles, M. A. (2015) ";
+  content: '\00a0⋮ Çengel, Y. A., Boles, M. A. (2015) ';
 }
 div.cite_textbook.cb8 span::after {
-	content: "Thermodynamics: An engineering approach, 8e. ";
+	content: 'Thermodynamics: An engineering approach, 8e. ';
 	font-style: italic;
 }
 div.cite_textbook.cb8::after {
-	content: "\00a0 McGraw-Hill Education.";
+	content: '\00a0 McGraw-Hill Education.';
 	/*font-style: normal;*/
 }
 
@@ -224,14 +223,14 @@ div.cite_textbook.cb8::after {
 
 
 div.cite_textbook.ms9 span::before {
-  content: "⋮ Moran, et al (2018) ";
+  content: '⋮ Moran, et al (2018) ';
 }
 div.cite_textbook.ms9 span::after {
-	content: "Fundamentals of Engineering Thermodynamics, 9e, ";
+	content: 'Fundamentals of Engineering Thermodynamics, 9e, ';
 	font-style: italic;
 }
 div.cite_textbook.ms9::after {
-	content: "\00a0 978-1-119-39138-8, John Wiley & Sons, Inc.";
+	content: '\00a0 978-1-119-39138-8, John Wiley & Sons, Inc.';
 	/*font-style: normal;*/
 }
 
@@ -253,7 +252,7 @@ section.toc h2 {
 }
 
 section.toc h2::before {
-	content: counter(toc_section, upper-greek)".\00a0";
+	content: counter(toc_section, upper-greek)'.\00a0';
 }
 
 section.toc > ol {
@@ -273,7 +272,7 @@ section.toc > ol {
 
 .toc ol li::before {
 	counter-increment: list_items;
-	content: counter(toc_section, lower-greek)"."counter(list_items) "\00a0\00a0";
+	content: counter(toc_section, lower-greek)'.'counter(list_items) '\00a0\00a0';
 }
 
 /*.toc ol li:first-of-type {
@@ -356,7 +355,7 @@ figure {
 }
 	
 figcaption::before {
-	content: "Figure "counter(figure_num)". ";
+	content: 'Figure 'counter(figure_num)'. ';
 	font-weight: bolder;
 }
 
