@@ -3,7 +3,7 @@ import {
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
-import { IThemeManager } from '@jupyterlab/apputils';
+import { IThemeManager } from  '@jupyterlab/apputils';
 
 /**
  * A plugin for myorg/jupyter_theme_youcan

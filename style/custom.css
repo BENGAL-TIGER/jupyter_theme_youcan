@@ -50,32 +50,42 @@
 	--royalpurple: 70, 29, 124;
 	--neonblue: 91, 62, 246;
 	--dash: green;
-	--cell: 200px;
+  --cell: 200px;
+  --jp-content-font-family: 'serif';
+
 }
 
+/* ```css
+div#id-cc447e53-0fb0-4ba9-8411-dbb076c35d96.lm-Widget.p-Widget.jp-Notebook.jp-mod-scrollPastEnd.jp-NotebookPanel-notebook.jp-mod-commandMode div.lm-Widget.p-Widget.jp-Cell.jp-MarkdownCell.jp-mod-rendered.jp-Notebook-cell
+```
 
+.jp-mod-rendered.jp-Notebook-cell {
+  background: chartreuse!important;
+} */
 
 
 /*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
-div#notebook-container.container {
-		font-family: 'LatoWeb';
+/* .jp-RenderedMarkdown {
+  font-family: 'LatoWeb';
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
   color: var(--coolassbrightblue);
-}
+} */
 
 /*div#notebook-container.container::before {
 	content: 'ttttt';
 }*/
 
+
+
 body {
 	counter-reset: toc_section;
-	font-family: 'LatoWeb';
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
   color: var(--coolassbrightblue);
+  /* color: green; */
 }
 
 body {
@@ -89,18 +99,23 @@ body {
 }
 
 
-.text_cell_render.rendered_html {
+/* .text_cell_render.rendered_html {
 	color: rgba(var(--body-text-color-blueblackblack));
-	/*color: green;*/
-}
+  font-family: "LatoWeb";
+  color: chartreuse;
+} */
 
 
 
 span.cm-comment {
 	font-family: 'Victor Mono', monospace;
 	/*font-style: italic;*/
-	font-variant-ligatures: nonoe;
+  font-variant-ligatures: none;
 }
+
+/* h3 {
+  color:red;
+} */
 
 h6#crazyindent {
 	display: none;
