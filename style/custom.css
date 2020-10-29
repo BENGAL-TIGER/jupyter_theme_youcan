@@ -86,6 +86,9 @@ body {
     }
 }
 
+a {
+  color: inherit;
+}
 
 span.cm-comment {
 	font-family: 'Victor Mono', monospace;
