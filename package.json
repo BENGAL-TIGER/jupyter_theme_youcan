@@ -1,6 +1,6 @@
 {
   "name": "@marcucius/jupyter_theme_youcan",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A JupyterLab theme extension for youCANdoThermodynamics library",
   "author": "marcus ashford <marcucius@icloud.com>",
   "keywords": [
