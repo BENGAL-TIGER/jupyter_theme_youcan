@@ -50,32 +50,20 @@
 	--royalpurple: 70, 29, 124;
 	--neonblue: 91, 62, 246;
 	--dash: green;
-  --cell: 200px;
-  --jp-content-font-family: 'LatoWeb';
-
+	--cell: 200px;
+	--primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --info-hover: #117a8b;
+  --warning: #ffc107;
+  --warning: #f0ae4e;
+	--warning-hover: #d39e00;
+  --danger: #dc3545;
+	--danger-hover: #bd2130;
+  --light: #f8f9fa;
+  --dark: #343a40;
 }
-
-/* ```css
-div#id-cc447e53-0fb0-4ba9-8411-dbb076c35d96.lm-Widget.p-Widget.jp-Notebook.jp-mod-scrollPastEnd.jp-NotebookPanel-notebook.jp-mod-commandMode div.lm-Widget.p-Widget.jp-Cell.jp-MarkdownCell.jp-mod-rendered.jp-Notebook-cell
-```
-
-.jp-mod-rendered.jp-Notebook-cell {
-  background: chartreuse!important;
-} */
-
-
-/*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
-/* .jp-RenderedMarkdown {
-  font-family: 'LatoWeb';
-	font-variant-numeric: oldstyle-nums; 
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-  color: var(--coolassbrightblue);
-} */
-
-/*div#notebook-container.container::before {
-	content: 'ttttt';
-}*/
 
 
 
@@ -97,14 +85,6 @@ body {
         font-variant-numeric: oldstyle-nums;
     }
 }
-
-
-/* .text_cell_render.rendered_html {
-	color: rgba(var(--body-text-color-blueblackblack));
-  font-family: "LatoWeb";
-  color: chartreuse;
-} */
-
 
 
 span.cm-comment {
@@ -208,6 +188,7 @@ header.index {
 
 
 
+
 div.cite_textbook.cb9 span::before {
   content: '\00a0 ⋮ Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019)';
 }
@@ -222,6 +203,7 @@ div.cite_textbook.cb9::after {
 
 
 
+
 div.cite_textbook.cb8 span::before {
   content: '\00a0⋮ Çengel, Y. A., Boles, M. A. (2015) ';
 }
@@ -231,6 +213,21 @@ div.cite_textbook.cb8 span::after {
 }
 div.cite_textbook.cb8::after {
 	content: '\00a0 McGraw-Hill Education.';
+	/*font-style: normal;*/
+}
+
+
+
+
+div.cite_textbook.cb7 span::before {
+  content: "\00a0⋮ Çengel, Y. A., Boles, M. A. (2011) ";
+}
+div.cite_textbook.cb7 span::after {
+	content: "Thermodynamics: An engineering approach, 7e. ";
+	font-style: italic;
+}
+div.cite_textbook.cb7::after {
+	content: "\00a0 McGraw-Hill Education, New York";
 	/*font-style: normal;*/
 }
 
@@ -267,7 +264,7 @@ section.toc h2 {
 }
 
 section.toc h2::before {
-	content: counter(toc_section, upper-greek)'.\00a0';
+	content: counter(toc_section, upper-greek)".\00a0";
 }
 
 section.toc > ol {
@@ -281,13 +278,21 @@ section.toc > ol {
 }
 
 .toc a:hover {
-	text-decoration: none!important;
+	text-decoration: underline!important;		
 	color: rgb(var(--coolassbrightblue));
+}
+
+.toc li:hover {
+	border-left: 0.5px solid #461dff;
+	padding-left: 1em;
+	margin-left: calc( -1em - 5px);
+  border-left-width: 5px;
+  border-radius: 6px;
 }
 
 .toc ol li::before {
 	counter-increment: list_items;
-	content: counter(toc_section, lower-greek)'.'counter(list_items) '\00a0\00a0';
+	content: counter(toc_section, lower-greek)"."counter(list_items) "\00a0\00a0";
 }
 
 /*.toc ol li:first-of-type {
@@ -295,7 +300,17 @@ section.toc > ol {
 }*/
 
 
-.toc ol li {
+.toc.mb-050em ol li {
+	display: flex;
+	margin-bottom: 0.5em;
+}
+
+.toc.mb-100em ol li {
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.toc.mb-200em ol li {
 	display: flex;
 	margin-bottom: 2em;
 }
@@ -308,6 +323,7 @@ section.toc > ol {
 	width: 20%;
 	height: 100%;
 	margin-top: 0;
+	padding-left: 0.3em;
 	/*flex: 0 1;*/
 	/*float: right;*/
 }
@@ -373,6 +389,155 @@ figcaption::before {
 	content: 'Figure 'counter(figure_num)'. ';
 	font-weight: bolder;
 }
+
+
+/* === callouts like those in bootstrap documentation*/
+
+/* from Chris Pratt: https://cpratt.co/twitter-bootstrap-callout-css-styles/ */
+
+.mcs-bs-callout {
+  padding: 5px 20px 20px 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 6px;
+}
+.mcs-bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.mcs-bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.mcs-bs-callout code {
+  border-radius: 3px;
+}
+.mcs-bs-callout+.mcs-bs-callout {
+  margin-top: -5px;
+}
+.mcs-bs-callout-default {
+  border-left-color: #777;
+}
+.mcs-bs-callout-default h4 {
+  color: #777;
+}
+
+
+.mcs-bs-callout-primary {
+  border-left-color: #428bca;
+}
+.mcs-bs-callout-primary h4 {
+  color: #428bca;
+}
+
+
+.mcs-bs-callout-success {
+  border-left-color: #5cb85c;
+}
+.mcs-bs-callout-success h4 {
+  color: #5cb85c;
+}
+
+
+.mcs-bs-callout-danger { 
+  /*border-left-color: #d9534f;*/
+  border-left-color: #b72030;
+  border-left-color: var(--danger);
+}
+.mcs-bs-callout-danger h4 {
+  /*color: #d9534f;*/
+  color: var(--danger);
+}
+.mcs-bs-callout-danger:hover { 
+  /*border-left-color: #d9534f;*/
+  border-left-color: var(--danger-hover);
+}
+.mcs-bs-callout-danger:hover h4 {
+  /*color: #d9534f;*/
+  color: var(--danger-hover);
+}
+.mcs-bs-callout-danger.extra { 
+  border-color: var(--danger-hover);
+  background: #f2dede;
+}
+.mcs-bs-callout-danger.extra h4 { 
+  color: var(--danger-hover);
+  /*font-variant: small-caps;*/
+  font-family: LatoWebBlack;
+  font-size: 125%;
+}
+
+
+.mcs-bs-callout-warning {
+  /*border-left-color: #f0ad4e;*/
+  border-left-color: var(--warning);
+}
+.mcs-bs-callout-warning h4 {
+  /*color: #f0ad4e;*/
+  color: #f0ad4e;
+  color: #8a6d3a;
+  color: #f0ae4e;
+  color:  var(--warning);
+}
+.mcs-bs-callout-warning.extra {
+  border-color: #b56101;
+  color: #8a6d3a;
+  background: #fbf8e3;
+}
+.mcs-bs-callout-warning.extra h4 {
+  color: #b56101;
+  font-family: LatoWebBlack;
+  font-size: 125%;
+}
+.mcs-bs-callout-warning.extra:hover {
+  border-color: #ec971f;
+}
+.mcs-bs-callout-warning.extra:hover h4 {
+  color: #ec971f;
+  font-family: LatoWebBlack;
+  font-size: 125%;
+}
+
+
+  
+.mcs-bs-callout-info {
+  /*border-left-color: #5bc0de;*/
+  border-left-color: #17a2b8;
+}
+.mcs-bs-callout-info:hover {
+  border-left-color: #117a8b;
+}
+.mcs-bs-callout-info h4 {
+  /*color: #5bc0de;*/
+  color: #17a2b8;
+}
+.mcs-bs-callout-info:hover h4 {
+  /*color: #5bc0de;*/
+  color: #117a8b;
+}
+
+/*
+--mcs-fg-color-primary: #007bff;
+--mcs-fg-color-hover-primary: #0062cc;
+--mcs-fg-color-info: #17a2b8;
+--mcs-fg-color-hover-info: #117a8b;
+--mcs-fg-color-warning: #ffc107;
+--mcs-fg-color-hover-warning: #d39e00;
+--mcs-fg-color-danger: #dc3545;
+--mcs-fg-color-hover-danger: #c82333;
+*/
+
+
+/*═════ mcs style ═══════════════════════════════════════════════════════════80════5═══*/
+
+.mcs-mb-1em {
+margin-bottom: 1em;
+}
+
+.mcs-mb-2em {
+margin-bottom: 2em;
+}
+
 
 
 /*═════ misc ════════════════════════════════════════════════════════════════80════5═══*/
