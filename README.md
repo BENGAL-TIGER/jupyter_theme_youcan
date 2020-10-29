@@ -17,8 +17,7 @@ jupyter labextension install @marcucius/jupyter_theme_youcan
 For a development install (requires npm version 4 or later), do the following in the repository directory:
 
 ```bash
-npm install
-jupyter labextension link .
+npm install jupyter labextension link .
 ```
 
 To rebuild the package and the JupyterLab app:
